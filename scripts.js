@@ -12,7 +12,7 @@ const getList = async () => {
     .then((data) => {
       data.futebol.forEach(item => insertList(item.mandante,
         item.visitante,
-        item.mandante_ganhou
+        item.mandante_ganhou ? "Sim" : "Não"
       ))
     })
     .catch((error) => {
