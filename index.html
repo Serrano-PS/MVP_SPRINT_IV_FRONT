@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Futebol Predictor</title>
+    <link rel="icon" href="img/soccer_ball.png" type="image/png">
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <!-- Cabeçalho com informações do sistema -->
+    <header>
+        <h2>Bem-Vindo ao Futebol Predictor</h2>
+        <p>Este sistema foi desenvolvido para prever o resultado de partidas de futebol.</p>
+        <p>Informe os dados abaixo e descubra se o time mandante ganharia a partida.</p>
+    </header>
+
+    <!-- Opções para adicionar um novo item -->
+    <section class="newItem">
+        <label for="homeTeam">Time Mandante</label>
+        <select id="homeTeam"></select>
+
+        <label for="awayTeam">Time Visitante</label>
+        <select id="awayTeam"></select>
+
+        <span onclick="predictOutcome()" class="addBtn">Prever Resultado</span>
+    </section>
+
+    <!-- Tabela com partidas existentes -->
+    <section class="matches">
+        <table id="myTable">
+            <tr>
+                <th>Time Mandante</th>
+                <th>Time Visitante</th>
+                <th>Mandante Ganhou? [0 = não, 1 = sim]</th>
+                <th><img src="https://images.vexels.com/media/users/3/223479/isolated/lists/8ecc75c9d0cf6d942cce96e196d4953f-cone-da-lixeira-plana.png"
+                        width="15" height="15"></th>
+            </tr>
+        </table>
+    </section>
+
+    <script src="scripts.js"></script>
+</body>
+
+</html>
